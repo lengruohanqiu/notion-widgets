@@ -1,12 +1,10 @@
-<html lang="en" data-dpr="1" style="font-size: 54px;"><head><style>body {transition: opacity ease-in 0.2s; } 
-body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
-</style>
+<html lang="en" data-dpr="1" style="font-size: 54px;"><head><style data-twind="claimed"></style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>周格子</title>
     <script src="../flexibleMerge.js"></script>
-    <script src="../lib/global.js?v=20221224"></script>
+    <script src="../lib/global.js?v=20230701"></script>
     <style type="text/css">
         html,
         body {
@@ -50,18 +48,262 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         }
       html[theme="dark"], html[theme="dark"] body {background-color:#191919;}
     </style>
-<input type="hidden" id="_w_simile" data-inspect-config="3"><script type="text/javascript" src="chrome-extension://odphnbhiddhdpoccbialllejaajemdio/scripts/inspector.js"></script><style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style></head><remove-web-limits-iqxin id="rwl-iqxin" class="rwl-exempt" style="position: fixed; top: 0px; left: 0px;"><qxinbutton type="qxinbutton" id="rwl-setbtn"> set </qxinbutton> <lalala style="cursor:move; font-size:12px;">限制解除</lalala> <input type="checkbox" name="" id="black_node"><style type="text/css">#rwl-iqxin{position:fixed;transform:translate(-95%,0);width:85px;height:25px;font-size:12px;font-weight: 500;font-family:Verdana, Arial, '宋体';color:#fff;background:#333;z-index:2147483647;margin: 0;opacity:0.05;transition:0.3s;overflow:hidden;user-select:none;text-align:center;white-space:nowrap;line-height:25px;padding:0 16px;border:1px solid #ccc;border-width:1px 1px 1px 0;border-bottom-right-radius:5px;box-sizing: content-box;}#rwl-iqxin input{margin: 0;padding: 0;vertical-align:middle;-webkit-appearance:checkbox !important;-moz-appearance:checkbox;position: static;clip: auto;opacity: 1;cursor: pointer;}#rwl-iqxin.rwl-active-iqxin{left: 0px;transform:translate(0,0);opacity: 0.9;height: 32px;line-height: 32px}#rwl-iqxin label{margin:0;padding:0;font-weight:500;}#rwl-iqxin #rwl-setbtn{margin: 0 4px 0 0;padding: 0 0 0 4px;border: none;border-radius: 2px;cursor: pointer;background: #fff;color: #000;} </style></remove-web-limits-iqxin>
+<input type="hidden" id="_w_simile" data-inspect-config="3"><script type="text/javascript" src="chrome-extension://odphnbhiddhdpoccbialllejaajemdio/scripts/inspector.js"></script><style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><style type="text/css">.___Latex___1nfc2_1 ._latex_1nfc2_1 {
+  font: inherit
+}
+</style><style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-<body style="font-size: 8px;">
+.immersive-translate-input-loading {
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+}
+
+@keyframes immersiveTranslateShadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+  }
+
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+  }
+
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+  }
+
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+  }
+
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+.immersive-translate-search-recomend {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  font-size: 16px;
+}
+.immersive-translate-search-enhancement-en-title {
+  color: #4d5156;
+}
+/* dark */
+@media (prefers-color-scheme: dark) {
+  .immersive-translate-search-recomend {
+    border: 1px solid #3c4043;
+  }
+  .immersive-translate-close-action svg {
+    fill: #bdc1c6;
+  }
+
+.immersive-translate-search-enhancement-en-title {
+  color: #bdc1c6;
+}
+}
+
+
+.immersive-translate-search-settings {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-search-recomend::before {
+  /* content: " "; */
+  /* width: 20px; */
+  /* height: 20px; */
+  /* top: 16px; */
+  /* position: absolute; */
+  /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
+}
+
+.immersive-translate-search-title {}
+
+.immersive-translate-search-title-wrapper {}
+
+.immersive-translate-search-time {
+  font-size: 12px;
+  margin: 4px 0 24px;
+  color: #70757a;
+}
+
+.immersive-translate-expand-items {
+  display: none;
+}
+
+.immersive-translate-search-more {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.immersive-translate-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.immersive-translate-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.immersive-translate-modal-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: hsl(205, 20%, 32%);
+}
+
+.immersive-translate-modal-body {
+  color: hsl(205, 20%, 32%)
+}
+
+.immersive-translate-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.immersive-translate-close:hover,
+.immersive-translate-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.immersive-translate-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.immersive-translate-btn {
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  font-size: 14px;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-translate-cancel-btn {
+  /* gray color */
+  background-color: rgb(89, 107, 120);
+}
+
+.immersive-translate-btn:hover {
+  background-color: #f082ac;
+}
+
+.immersive-translate-cancel-btn:hover {
+  background-color: hsl(205, 20%, 32%);
+}
+
+
+.immersive-translate-btn svg {
+  margin-right: 5px;
+}
+
+.immersive-translate-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #007bff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-modal input[type="radio"] {
+  margin: 0 6px 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-modal label {
+  cursor: pointer;
+}
+
+.immersive-translate-close-action {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+}
+</style></head>
+
+<body style="font-size: 12px;">
     <div class="container">
         <ul class="inner">
-            <li class="ceil active">月曜日</li>
-            <li class="ceil active">火曜日</li>
-            <li class="ceil active">水曜日</li>
-            <li class="ceil">木曜日</li>
-            <li class="ceil">金曜日</li>
-            <li class="ceil">土曜日</li>
-            <li class="ceil">日曜日</li>
+            <li class="ceil active">一</li>
+            <li class="ceil active">二</li>
+            <li class="ceil active">三</li>
+            <li class="ceil active">四</li>
+            <li class="ceil active">五</li>
+            <li class="ceil">六</li>
+            <li class="ceil">日</li>
         </ul>
     </div>
 
@@ -72,5 +314,4 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         ceils[i - 1].classList.add('active');
     }
 </script>
-
-<div><div style="display: none; position: fixed; top: 30px; width: auto; max-width: 100%; text-align: center; left: 50%; transform: translateX(-50%); z-index: 99999999;"><div style="display: inline-block; font-size: 14px; font-weight: bold; border: 1px solid rgb(240, 195, 109); background-color: rgb(249, 237, 190); padding: 0px 10px; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;"></div></div></div></body><yetone-openai-translator style="z-index: 2147483647;"></yetone-openai-translator><div id="__yetone-openai-translator" style="z-index: 2147483647;"></div></html>
+</html>
