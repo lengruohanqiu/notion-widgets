@@ -1,0 +1,450 @@
+<html lang="en" data-dpr="1" style="font-size: 54px;"><head><style data-twind="claimed"></style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年进度</title>
+    <script src="../flexibleMerge.js"></script>
+    <script src="../lib/global.js?v=20230701"></script>
+    <style>
+        body,
+        html {
+            background-color: #ffffff;
+            padding: 0;
+            margin: 0;
+        }
+
+        .progress-group {
+            width: 10rem;
+            margin: 0 auto;
+            font-family: Verdana;
+            /* height: 100vh; */
+            padding: .266667rem;
+            box-sizing: border-box;
+            font-size: .266667rem;
+        }
+
+        #left {
+            width: 100px;
+        }
+
+        #right {
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+            width: 7rem;
+            height: .266667rem;
+            border-radius: .266667rem;
+            background: #f3f3f3;
+            color: #ffffff;
+            overflow: hidden;
+            margin: 0 .2rem;
+        }
+
+        li div {
+            background: #333333;
+            height: 100%;
+            width: 0;
+            border-radius: .266667rem;
+            font-size: 12px;
+            text-align: right;
+            line-height: 20px;
+        }
+
+        /* li div span {display: inline-block; box-sizing: border-box; text-align: right; font-size: .426667rem;} */
+        h2 {
+            margin: 0;
+            line-height: 28px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .countdown span {
+            width: 50px;
+            border-radius: 10px;
+            border: 2px solid #333333;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+            margin: 0 20px;
+            font-size: 24px;
+        }
+
+        .top {
+            display: flex;
+        }
+
+        .progress-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .progress-item>span {
+            font-size: .373333rem;
+        }
+
+        #year-bar {
+            color: rgba(167, 119, 119, 1);
+        }
+
+        #year {
+            background-color: rgba(167, 119, 119, .2);
+        }
+
+        #year div {
+            background-color: rgba(167, 119, 119, 1);
+        }
+
+        #month-bar {
+            color: rgba(165, 169, 187, 1);
+        }
+
+        #month {
+            background-color: rgba(165, 169, 187, .2);
+        }
+
+        #month div {
+            background-color: rgba(165, 169, 187, 1);
+        }
+
+        #week-bar {
+            color: rgba(213, 182, 176, 1);
+        }
+
+        #week {
+            background-color: rgba(213, 182, 176, .2);
+        }
+
+        #week div {
+            background-color: rgba(213, 182, 176, 1);
+        }
+      html[theme="dark"], html[theme="dark"] body {background-color:#191919;}
+    </style>
+<input type="hidden" id="_w_simile" data-inspect-config="3"><script type="text/javascript" src="chrome-extension://odphnbhiddhdpoccbialllejaajemdio/scripts/inspector.js"></script><style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><style type="text/css">.___Latex___1nfc2_1 ._latex_1nfc2_1 {
+  font: inherit
+}
+</style><style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.immersive-translate-input-loading {
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+}
+
+@keyframes immersiveTranslateShadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+  }
+
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+  }
+
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+  }
+
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+  }
+
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+.immersive-translate-search-recomend {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  font-size: 16px;
+}
+.immersive-translate-search-enhancement-en-title {
+  color: #4d5156;
+}
+/* dark */
+@media (prefers-color-scheme: dark) {
+  .immersive-translate-search-recomend {
+    border: 1px solid #3c4043;
+  }
+  .immersive-translate-close-action svg {
+    fill: #bdc1c6;
+  }
+
+.immersive-translate-search-enhancement-en-title {
+  color: #bdc1c6;
+}
+}
+
+
+.immersive-translate-search-settings {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-search-recomend::before {
+  /* content: " "; */
+  /* width: 20px; */
+  /* height: 20px; */
+  /* top: 16px; */
+  /* position: absolute; */
+  /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
+}
+
+.immersive-translate-search-title {}
+
+.immersive-translate-search-title-wrapper {}
+
+.immersive-translate-search-time {
+  font-size: 12px;
+  margin: 4px 0 24px;
+  color: #70757a;
+}
+
+.immersive-translate-expand-items {
+  display: none;
+}
+
+.immersive-translate-search-more {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.immersive-translate-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.immersive-translate-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.immersive-translate-modal-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: hsl(205, 20%, 32%);
+}
+
+.immersive-translate-modal-body {
+  color: hsl(205, 20%, 32%)
+}
+
+.immersive-translate-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.immersive-translate-close:hover,
+.immersive-translate-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.immersive-translate-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.immersive-translate-btn {
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  font-size: 14px;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-translate-cancel-btn {
+  /* gray color */
+  background-color: rgb(89, 107, 120);
+}
+
+.immersive-translate-btn:hover {
+  background-color: #f082ac;
+}
+
+.immersive-translate-cancel-btn:hover {
+  background-color: hsl(205, 20%, 32%);
+}
+
+
+.immersive-translate-btn svg {
+  margin-right: 5px;
+}
+
+.immersive-translate-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #007bff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-modal input[type="radio"] {
+  margin: 0 6px 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-modal label {
+  cursor: pointer;
+}
+
+.immersive-translate-close-action {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+}
+</style></head>
+
+<body style="font-size: 12px;">
+    <ul class="progress-group">
+        <div id="right">
+            <div class="progress-item" id="year-bar">
+                <span>今年</span>
+                <li id="year">
+                    <div style="width: 55.3425%;"></div>
+                </li>
+                <em>202/365</em>
+            </div>
+            <div class="progress-item" id="month-bar">
+                <span>本月</span>
+                <li id="month">
+                    <div style="width: 67.7419%;"></div>
+                </li>
+                <em>21/31</em>
+            </div>
+            <div class="progress-item" id="week-bar">
+                <span>本周</span>
+                <li id="week">
+                    <div style="width: 71.4286%;"></div>
+                </li>
+                <em>5/7</em>
+            </div>
+        </div>
+    </ul>
+
+<script>
+    let Days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let now_date = new Date(), _time = now_date.getTime(), now_year = now_date.getFullYear();
+    // 周
+    let _day = now_date.getDay();
+    _day = _day ? _day : 7;
+    let _week = document.getElementById('week');
+    _week.children[0].style.width = `${_day * 100 / 7}%`;
+    document.getElementById('week-bar').children[2].innerHTML = `${_day}/7`;
+
+    // 月
+    if (now_year % 4 === 0 && now_year % 100 != 0) {
+        // 闰年
+        Days[2] = 29;
+    }
+    let cur_month = now_date.getMonth() + 1, month_day = now_date.getDate();
+
+    document.getElementById('month').children[0].style.width = `${month_day * 100 / Days[cur_month]}%`;
+    document.getElementById('month-bar').children[2].innerHTML = `${month_day}/${Days[cur_month]}`;
+
+    // 年
+    let year_start = new Date(`${now_year}/1/1`).getTime();
+    let _du = _time - year_start;
+    let days = Math.ceil(_du / (24 * 60 * 60 * 1000));
+    let total = now_year % 4 === 0 && now_year % 100 !== 0 ? 366 : 365;
+    let _year = document.getElementById('year');
+    let year_rate = days * 100 / total;
+    let year_text = year_rate <= 15 ? days : year_rate <= 30 ? `${days} / ${total}` : `${days} / ${total} (${(year_rate).toFixed(0)}%)`;
+    _year.children[0].style.width = `${days * 100 / total}%`;
+    document.getElementById('year-bar').children[2].innerHTML = `${days}/${total}`;
+
+    // 倒计时
+    // setTime();
+    // setInterval(setTime, 1000);
+    function setTime() {
+        let _now = new Date();
+        let hour = _now.getHours();
+        let minutes = _now.getMinutes();
+        let seconds = _now.getSeconds();
+        document.getElementById('hour').innerHTML = hour < 10 ? `0${hour}` : hour;
+        document.getElementById('minute').innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+        document.getElementById('second').innerHTML = seconds < 10 ? `0${seconds}` : seconds;
+    }
+</script>
+
+
+</html>
